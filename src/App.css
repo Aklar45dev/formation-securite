@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+html{
+  background-color: #111;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  background-color: #111;
+  height:max-content;
+  display: block;
+  padding-top: 5em;
+  padding-right: 20%;
+  padding-left: 20%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title-font{
   color: white;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn{
+  background-color: Transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn:hover{
+  opacity: 0.7;
+}
+
+.btn-pic{
+  width: 100%;
+  border-radius: 2em;
+  margin: 0em;
+}
+
+.btn-title{
+  color: white;
+  text-justify: center;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.btn-subtitle{
+  color: white;
+  text-justify: center;
+  text-align: center;
+  margin-top: 0;
+  font-size: 1.25em;
+}
+
+#video{
+  display: none;
+}
+
+#video video{
+  width: 100%;
+}
+
+.res-container {
+ display: flex;
+ flex-direction: row;
+}
+
+#response{
+  display: none;
+  flex-direction: column;
+}
+
+#response video{
+  width: 50%;
+}
+
+.info{
+  width: 100%;
+  margin-right: 2em;
+}
+
+.para{
+  margin-right: 2em;
+  color: white;
+  width: 100%;
+  font-weight: 500;
+}
+
+.select-title{
+  font-size: 2em;
+  text-align: center;
+  color:white;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.info-title{
+  font-size: 2em;
+  text-align: center;
+  color:orangered;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.selectBtn{
+  width: 50%;
+  font-size: 1em;
+  color: white;
+  background-color:orangered;
+  border-radius: 1em;
+  height:100px;
+  cursor: pointer;
+  border: 0;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  align-self: center;
+}
+
+.selectBtn:hover{
+  opacity: 0.7;
+}
+
+#selector{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  background-color: #00000095;
+  padding-top: 10%;
+  padding-bottom: 5em;
+  padding-bottom: 5em;
+  height: 100%;
+  left: 0;
+}
+
+.retour{
+  align-self: center;
+  border-radius: 1em;
+  padding: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  margin-top: 5em;
+  cursor: pointer;
+  color: #111;
+  border: 0;
+}
+
+.retour:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .btn-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App{
+    background-color: #111;
+    height:max-content;
+    display: block;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
+
+  .btn-title{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+  }
+
+  .btn-subtitle{
+    color: white;
+    text-justify: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 3em;
+    font-size: 1.25em;
+  }
+
+  .selectBtn{
+    width: 100%;
+    font-size: 1em;
+    color: white;
+    background-color:orangered;
+    border-radius: 1em;
+    height: auto;
+    cursor: pointer;
+    border: 0;
+    margin-bottom: 0.5em;
+    padding: 1em;
+    align-self: center;
+  }
+
+  .res-container {
+    display: flex;
+    flex-direction: column;
+   }
+
+   #response video{
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .info-title{
+    font-size: 2em;
+    text-align: center;
+    color:orangered;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    font-weight: 500;
+  }
+
+  .para{
+    padding: 1em;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .retour{
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .title-font{
+    margin-bottom: 1em;
+  }
+
 }
