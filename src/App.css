@@ -67,6 +67,8 @@ html{
 .res-container {
  display: flex;
  flex-direction: row;
+ margin-top: 9em;
+
 }
 
 #response{
@@ -206,6 +208,7 @@ html{
   .res-container {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
    }
 
    #response video{
@@ -223,7 +226,7 @@ html{
   }
 
   .para{
-    padding: 1em;
+    padding: 0.5em;
     width: auto;
     margin-right: 0;
   }
