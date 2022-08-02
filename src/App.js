@@ -5,9 +5,11 @@ import React, { useRef, useState, useEffect } from 'react'
 
 function App() {
 
-  const chapter = [{audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+1.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-2.mp4', choice1: 'Souhaitant clarifier ses incompréhensions rapidement, il intervient immédiatement dans le groupe afin de demander des précisions.', choice2: 'À la sortie, il demande au superviseur quand sera le bon moment pour lui parler avant la tâche. Le superviseur lui dit qu’il passera le voir rapidement. Il lui posera alors ses questions.', choice3: 'Il attend que la rencontre se termine et va valider les informations avec le superviseur lorsque tout le monde se dirige vers leur tâche à accomplir.', text: 'En tant que responsable de sa propre sécurité, un travailleur ou une travailleuse qui a des interrogations ou des doutes au sujet de sa carte de travail, de sa tâche, ou autres questions pouvant affecter l’accomplissement de son travail, se doit d’interroger son supérieur afin d’obtenir des précisions. Chaque situation est différente et, choisir le bon moment pour demander des précisions ou poser des questions peut faire la différence entre une réponse qui n’est pas suffisamment précise et une réponse claireé. Faire le choix d’attendre de parler à son superviseur à la fin de la rencontre, permet un meilleur échange sur ce qui a été compris ou non. De plus, cela favorise le dialogue, permet de réduire le stress et les appréhensions face à sa première journée de travail.'},
-                  {audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+2.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-2.mp4', choice1: 'Incertain, il demande à son collègue qu`il détaille sa méthode et la raison qui le motive à l’utiliser, une fois les instructions reçues, il partage l’opinion de son collègue et décide donc de procéder selon cette méthode qu’ils considèrent toutes les deux comme efficace et sécuritaire.', choice2: 'Après avoir demandé des précisions à son collègue et avoir fait la lecture de la fiche de cadenassage, il choisit de faire un compromis entre les deux méthodes. Il considère que prendre le meilleur des deux solutions lui garantira un bon résultat.', choice3: 'Ne pas écouter son collègue, prendre la fiche de cadenassage et appliquer la procédure comme indiqué par le règlement.', text: 'L’expérience des collègues et l’entraide sont une force dans un milieu de travail. Tous aspirent à être écoutés et respectés. De plus, vos collègues ont certainement des choses à vous apprendre. Cependant, suivre aveuglément le conseil d’un collègue qui nous invite à ne pas respecter une règle de sécurité, ou même choisir délibérément de ne pas suivre une procédure, peut mettre la santé et la sécurité de tous en danger. Lorsque nous sommes confrontés à ce type de situation, l’important est d’exercer son sens critique et son jugement, il faut d’abord essayer de comprendre les motivations de nos collègues par la discussion, puis trouver la solution la plus sécuritaire et la valider auprès de son superviseur.'},
-                  {audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+3.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-2.mp4', choice1: 'Nouveau en poste, il ne se sent pas à l’aise d’intervenir. Sans aviser son collègue de la situation à risque, il part rapidement aviser son superviseur avant que son collègue vive une situation potentiellement dangereuse.', choice2: 'Il intervient rapidement auprès de son collègue et lui demande d’arrêter sa tâche immédiatement, il avise son collègue que la situation est dangereuse en expliquant les risques d’un tel problème.', choice3: 'Sans trop donner de détails, il avise son collègue du risque d’utiliser une meuleuse portative en lui indiquant qu’il ne voudrait pas que quelque chose de malheureux arrive.', text: 'Aviser ses collègues lorsqu’ils sont dans une situation à risque est la chose à faire. Cela permet de prévenir de potentiels accidents et permet de garder ses collègues en sécurité. Encore une fois, il est important de le faire au bon moment et surtout de la bonne façon. Les sensibiliser sur les conséquences possibles d’un accident permet d’imaginer la situation et d’en comprendre la gravité, cela donnera de la crédibilité à votre intervention. Dans un milieu de travail nous sommes tous responsables, favoriser le dialogue entre les personnes permet de mieux comprendre les situations vécues par chacun et d’éviter de futurs dangers. Si le collègue ne semble pas ouvert à la discussion, il faut en aviser le superviseur. Lui parler de votre intention de le protéger peut contribuer à convaincre la personne d’adapter son comportement.'}]
+
+  
+  const chapter = [{question: "Quel aurait été la bonne attitude à adapté lors de la réunion du début de quart de travail ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+1.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch1-2.mp4', choice1: 'Souhaitant clarifier ses incompréhensions rapidement, il intervient immédiatement dans le groupe afin de demander des précisions.', choice2: 'À la sortie, il demande au superviseur quand sera le bon moment pour lui parler avant la tâche. Le superviseur lui dit qu’il passera le voir rapidement. Il lui posera alors ses questions.', choice3: 'Il attend que la rencontre se termine et va valider les informations avec le superviseur lorsque tout le monde se dirige vers leur tâche à accomplir.', text: ["• Assurer votre sécurité et celles de vos collègues", "• Poser des questions", "• Choisissez le bon moment", "• Favoriser le dialogue"]},
+                  {question: "Quel aurait été le bon comportement a adopté pour cette situation ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+2.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-1V2.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch2-2.mp4', choice1: 'Incertain, il demande à son collègue qu`il détaille sa méthode et la raison qui le motive à l’utiliser, une fois les instructions reçues, il partage l’opinion de son collègue et décide donc de procéder selon cette méthode qu’ils considèrent toutes les deux comme efficace et sécuritaire.', choice2: 'Après avoir demandé des précisions à son collègue et avoir fait la lecture de la fiche de cadenassage, il choisit de faire un compromis entre les deux méthodes. Il considère que prendre le meilleur des deux solutions lui garantira un bon résultat.', choice3: 'Ne pas écouter son collègue, prendre la fiche de cadenassage et appliquer la procédure comme indiqué par le règlement.', text: ["• Exercer son jugement", "• Écouter son collègue", "• Collaborer pour trouver la solution la plus sécuritaire", "• Valider auprès de son superviseur"]},
+                  {question: "Qu'est que Jeff aurait pu faire pour éviter que son collègue se blesse ?", audio: "https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/paragraphe+3.wav", url: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-1.mp4', urlMuted: 'https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/Ch3-2.mp4', choice1: 'Nouveau en poste, il ne se sent pas à l’aise d’intervenir. Sans aviser son collègue de la situation à risque, il part rapidement aviser son superviseur avant que son collègue vive une situation potentiellement dangereuse.', choice2: 'Il intervient rapidement auprès de son collègue et lui demande d’arrêter sa tâche immédiatement, il avise son collègue que la situation est dangereuse en expliquant les risques d’un tel problème.', choice3: 'Sans trop donner de détails, il avise son collègue du risque d’utiliser une meuleuse portative en lui indiquant qu’il ne voudrait pas que quelque chose de malheureux arrive.', text: ["• Signaler le danger", "• Choisir le bon moment", "• Choisir …"]}]
 
   const selection = [{1: "Demander des précisions pendant la réunion préparatoire.", 2: "Demander de venir le superviseur voir rapidement pour des précisions.", 3: "Demander des renseignements au superviseur justes après la réunion préparatoire.", 4: 'Pas tout à fait...', 5: 'Bon choix!', 6: 'Pas tout à fait...'},
                     {1: "Considérer l’expérience de son collègue et suivre ses directives même si elles sont contraires à la procédure.", 2: "Prendre le meilleur des deux options.", 3: "Appliquer la procédure indiquer dans le règlement.", 4: 'Pas la bonne réponse...', 5: 'Pas tout à fait...', 6: 'Presque!'},
@@ -67,21 +69,21 @@ function App() {
         <div className='btn-container'>
           <div>
             <button className="btn" onClick={() => startvideo(0)}>
-              <img className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/frame1.png' />
+              <img alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/v2/frame1.png' />
             </button>
             <h2 className="btn-title">Chapitre 1</h2>
             <p className="btn-subtitle">Le briefing</p>
           </div>
           <div>
             <button className="btn" onClick={() => startvideo(1)}>
-              <img className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch2+freeze+frame+1.png' />
+              <img alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch2+freeze+frame+1.png' />
             </button>
             <h2 className="btn-title">Chapitre 2</h2>
             <p className="btn-subtitle">Le cadenassage</p>
           </div>
           <div>
             <button className="btn" onClick={() => startvideo(2)}>
-              <img className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch3+freeze+frame+2.png' />
+              <img  alt="pic" className="btn-pic" src='https://formation-video-cfpvd.s3.ca-central-1.amazonaws.com/Ch3+freeze+frame+2.png' />
             </button>
             <h2 className="btn-title">Chapitre 3</h2>
             <p className="btn-subtitle">Comportement dangereux</p>
@@ -91,7 +93,7 @@ function App() {
       <div id="video">
         <video src={url} ref={vidRef} onEnded={showQuestions} />
         <div id="selector">
-          <div className="select-title">Quel aurait été la bonne attitude à adopté?</div>
+          <div className="select-title">{chapter[id].question}</div>
           <button className="selectBtn" onClick={() => validate('1','4')}>{chapter[id].choice1}</button>
           <button className="selectBtn" onClick={() => validate('2','5')}>{chapter[id].choice2}</button>
           <button className="selectBtn" onClick={() => validate('3','6')}>{chapter[id].choice3}</button>
@@ -102,7 +104,11 @@ function App() {
           <div className="info">
             <div className="info-title">{selection[id][ansid]}</div>
             <div className="retro-subtitle">{selection[id][retroid]}</div>
-            <div className="para">{chapter[id].text}</div>
+            <div className="para">Les éléments clés :</div>
+            <div className="para-list">{chapter[id].text[0] === undefined ? "" : chapter[id].text[0]}</div>
+            <div className="para-list">{chapter[id].text[1] === undefined ? "" : chapter[id].text[1]}</div>
+            <div className="para-list">{chapter[id].text[2] === undefined ? "" : chapter[id].text[2]}</div>
+            <div className="para-list">{chapter[id].text[3] === undefined ? "" : chapter[id].text[3]}</div>
           </div>
           <div className='video-retro-container'>
             <video src={chapter[id].urlMuted} autoPlay muted loop />

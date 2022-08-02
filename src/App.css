@@ -1,9 +1,9 @@
 html{
-  background-color: #111;
+  background-color: #fff;
 }
 
 .App{
-  background-color: #111;
+  background-color: #fff;
   height:max-content;
   display: block;
   padding-top: 5em;
@@ -12,7 +12,7 @@ html{
 }
 
 .title-font{
-  color: white;
+  color: black;
   font-size: 3em;
   text-align: center;
   margin-bottom: 1.5em;
@@ -36,12 +36,12 @@ html{
 
 .btn-pic{
   width: 100%;
-  border-radius: 2em;
+  border-radius: 1em;
   margin: 0em;
 }
 
 .btn-title{
-  color: white;
+  color: black;
   text-justify: center;
   text-align: center;
   font-size: 2em;
@@ -49,7 +49,7 @@ html{
 }
 
 .btn-subtitle{
-  color: white;
+  color: black;
   text-justify: center;
   text-align: center;
   margin-top: 0;
@@ -58,10 +58,13 @@ html{
 
 #video{
   display: none;
+  background-color: #fff;
+
 }
 
 #video video{
   width: 100%;
+  border-radius: 1em;
 }
 
 .res-container {
@@ -76,6 +79,11 @@ html{
   display: flex;
   flex-direction: column;
   width: 100%;
+  border-radius: 1em;
+}
+
+.video-retro-container video{
+  border-radius: 1em;
 }
 
 #response{
@@ -89,12 +97,20 @@ html{
 
 .info{
   width: 100%;
-  margin-right: 2em;
+  margin-right: 1.5em;
 }
 
 .para{
   margin-right: 2em;
-  color: white;
+  color: blakc;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.para-list{
+  margin-left: 1em;
+  color: black;
   width: 100%;
   font-weight: 500;
 }
@@ -102,7 +118,7 @@ html{
 .select-title{
   font-size: 2em;
   text-align: center;
-  color:white;
+  color:black;
   margin-bottom: 1em;
   font-weight: 500;
 }
@@ -112,13 +128,13 @@ html{
   text-align: center;
   color:orangered;
   margin-bottom: 1em;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .retro-subtitle{
   font-size: 1.5em;
   text-align: center;
-  color:white;
+  color:blakc;
   margin-top: 0.5em;
   margin-bottom: 1em;
   font-weight: 500;
@@ -148,7 +164,7 @@ html{
   flex-direction: column;
   position: absolute;
   top: 0;
-  background-color: #00000095;
+  background-color: #fff;
   padding-top: 10%;
   padding-bottom: 5em;
   padding-bottom: 5em;
@@ -184,7 +200,7 @@ html{
   }
 
   .App{
-    background-color: #111;
+    background-color: #fff;
     height:max-content;
     display: block;
     padding-top: 0;
@@ -242,7 +258,7 @@ html{
     text-align: center;
     color:orangered;
     margin-top: 0.5em;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .para{
